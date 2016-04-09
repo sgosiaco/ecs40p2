@@ -13,7 +13,7 @@ else
       shift
       while [ $# -gt 0 ]; do
         if [[ $1 = \-* ]]; then
-          $ARGS+=$1
+          ARGS+=$1
         fi
         shift
       done
