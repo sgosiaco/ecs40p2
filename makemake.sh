@@ -4,7 +4,7 @@ args=""
 exe=""
 files=""
 dep=""
-if [ $# -ne 1 ]; then
+if [ $# -lt 1 ]; then
   echo Executable name required.
   echo usage: makemake.sh executable_name
 else
