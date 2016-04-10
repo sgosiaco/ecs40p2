@@ -9,7 +9,6 @@ else
     echo usage: grepdir.sh directory pattern [-grep option]*
   else
     if [ $# -eq 2 ]; then
-      #find $1 -exec grep $ARGS $2 {} \;
       grep $ARGS $2 $1
     else
       dir=$1
@@ -25,7 +24,6 @@ else
         fi
         shift
       done
-      #find $dir -exec grep $ARGS $pattern {} \;
       grep $ARGS $pattern $dir
     fi
   fi
