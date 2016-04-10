@@ -8,8 +8,8 @@ if [ $# -ne 1 ]; then
 else
   exe=$1
   for f in *.cpp; do
-    files=$files${file%.cpp}".o "
+    files=$files${f%.cpp}".o "
   done
   echo $exe : $files >> Makefile
-  echo '\t'$gpp -o $exe $files
+  echo $'\t'$gpp -o $exe $files >> Makefile
 fi
