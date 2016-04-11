@@ -19,7 +19,7 @@ else
   for f in *.cpp; do
     files=$files${f%.cpp}".o "
   done
-  echo $exe : $files >> Makefile
+  echo $exe : $files > Makefile
   echo $'\t'$gpp -o $exe $args$files$'\n' >> Makefile
   for file in *.cpp; do
     dep=$(awk -F'"' '$0=$2' $file | awk 'BEGIN { ORS=" " }; /.h$/')
