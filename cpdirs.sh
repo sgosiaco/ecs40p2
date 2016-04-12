@@ -10,6 +10,6 @@ else
      exit
     fi
   fi
-  cp -u $1/* $3/
-  cp -u $2/* $3/
+  cp -p -u $1/* $3/
+  cp -p -u $2/* $3/
 fi

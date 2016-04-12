@@ -9,7 +9,7 @@ while [ $# -gt 0 ] ; do
  *.tar.gz) tar -xzf $1 ;;
  *.gz) gunzip $1 ;;
  *.zip) unzip -qq $1 ;;
- *) echo $0: $1 has no compression extension. ;;
+ *) echo uncomp.sh: $1 has no compression extension. ;;
  esac
  shift
 done # while
