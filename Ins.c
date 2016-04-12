@@ -1,5 +1,7 @@
+#include <stdio.h>
+#include <stdlib.h>
 
-// insertion sort, several errors
+// insertion sort, *fixed several errors
 
 int X[10],  // input array
     Y[10],  // workspace array  
@@ -7,13 +9,13 @@ int X[10],  // input array
     NumY = 0;  // current number of 
                // elements in Y
 
-void GetArgs(int XX[], int AC, char **AV)
+void GetArgs(int in[], int AC, char **AV)
 
 {  int I;
 
    NumInputs = AC - 1;
    for (I = 0; I < NumInputs; I++)
-      XX[I] = atoi(AV[I+1]);
+      in[I] = atoi(AV[I+1]);
 }
 
 void ScootOver(int JJ)
