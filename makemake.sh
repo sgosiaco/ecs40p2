@@ -23,7 +23,7 @@ else
   echo $'\t'$gpp -o $exe $args$files$'\n' >> Makefile
   for file in *.cpp; do
     dep=$(awk -F'"' '$0=$2' $file | awk 'BEGIN { ORS=" " }; /.h$/')
-    echo ${file%.cpp}".o " : $file $dep >> Makefile
+    echo ${file%.cpp}".o" : $file $dep >> Makefile
     echo $'\t'$gpp -c $args$file$'\n' >> Makefile
   done
   echo clean :$'\n'$'\t'rm -f $exe $files >> Makefile
