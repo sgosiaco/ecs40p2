@@ -30,8 +30,7 @@ void Insert(int NewY)
 
 {  int J;
 
-   if (NumY == 0)  { // Y empty so far, 
-                    // easy case
+   if (NumY == 0)  { // Y empty so far, easy case
       Y[0] = NewY;
       return;
    }
